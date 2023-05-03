@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyan-0-3: hsla(178, 100%, 50%, 0.3);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  font-family: "Outfit", sans-serif;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 600ms;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.125rem;
+  font-weight: 200;
+  color: var(--Soft-blue);
+  background-image: linear-gradient(
+    to top,
+    var(--Very-dark-blue-card-BG),
+    var(--Very-dark-blue-main-BG)
+  );
+  display: grid;
+  place-content: center;
+}
+h1 {
+  color: var(--White);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+h1:hover {
+  color: var(--Cyan);
+  text-shadow: 0 0 20px var(--Cyan-0-3);
+  cursor: pointer;
+}
+
+/*******  main  ********/
+.cardConteiner {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 21.875rem;
+  padding: min(6vw, 1.5rem);
+  margin: 1rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--Very-dark-blue-card-BG),
+    var(--Very-dark-blue-main-BG)
+  );
+}
+.cardConteiner .data {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  gap: 1rem;
+}
+.mainImage {
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-color: var(--Cyan);
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.iconView {
+  position: absolute;
+  width: 3rem;
+  filter: opacity(0%);
+}
+.iconView:hover {
+  cursor: pointer;
+}
+.mainImage:hover img:first-child {
+  filter: opacity(50%);
+  cursor: pointer;
+  scale: 120%;
+}
+.mainImage:hover img:last-child {
+  filter: opacity(100%);
+}
+.eth {
+  color: var(--Cyan);
+  font-weight: 700;
+}
+.eth,
+.daysLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.eth img,
+.daysLeft img {
+  height: 1.1rem;
+  width: auto;
+}
+.daysLeft {
+  font-weight: 400;
+}
+.creator img {
+  width: 2rem;
+  border: 1px solid var(--White);
+  border-radius: 10rem;
+  margin-right: 1rem;
+}
+.creator {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+  border-top: 1px solid var(--Very-dark-blue-line);
+}
+.creator img:hover {
+  scale: 150%;
+  cursor: pointer;
+}
+.name {
+  color: var(--White);
+  margin-left: 0.5rem;
+}
+.name:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+  text-shadow: 0 0 20px var(--Cyan-0-3);
+}
+
+/******* footer ********/
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228, 43%, 88%);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--Cyan);
+  text-decoration: underline;
+}
