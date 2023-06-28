@@ -49,7 +49,7 @@ h1:hover {
   gap: 1.5rem;
   max-width: 21.875rem;
   padding: min(6vw, 1.5rem);
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   border-radius: 1rem;
   background-image: linear-gradient(
     to bottom,
@@ -70,6 +70,7 @@ h1:hover {
   background-color: var(--Cyan);
   border-radius: 0.6rem;
   overflow: hidden;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .iconView {
   position: absolute;
@@ -119,7 +120,7 @@ h1:hover {
   border-top: 1px solid var(--Very-dark-blue-line);
 }
 .creator img:hover {
-  scale: 150%;
+  scale: 120%;
   cursor: pointer;
 }
 .name {
